@@ -23,9 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${montserrat.className} antialiased h-svh`}>
+      <body
+        className={`${montserrat.className} antialiased h-vh overflow-x-hidden`}
+      >
         <Header />
-        <main className="container p-4 flex flex-col mx-auto transition-all duration-500">
+        <main className="container max-w-5xl p-4 flex flex-col mx-auto transition-all duration-500">
           {children}
         </main>
       </body>
