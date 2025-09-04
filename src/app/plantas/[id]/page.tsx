@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { Section } from "@/components/section";
 import { Title } from "@/components/title";
 import { prismaClient } from "@/lib/prisma";

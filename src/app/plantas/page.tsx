@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { Section } from "@/components/section";
 import Link from "next/link";
 import { ImageCard } from "@/components/image-card";
