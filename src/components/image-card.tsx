@@ -1,23 +1,29 @@
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-interface ImageCardProps {
-  src: string;
-  alt: string;
+interface ImageCardProps extends ImageProps {
   caption?: string;
+  aspectRatio?: number;
 }
 
-export function ImageCard({ src, alt, caption }: ImageCardProps) {
+export function ImageCard({
+  src,
+  alt,
+  caption,
+  aspectRatio = 16 / 9,
+  ...props
+}: ImageCardProps) {
   return (
     <figure className="w-full overflow-hidden">
-      <AspectRatio ratio={16 / 9} className="rounded-2xl overflow-hidden">
+      <AspectRatio ratio={aspectRatio} className="rounded-2xl overflow-hidden">
         <Image
           src={src}
           alt={alt}
           width={0}
           height={0}
           sizes="100vw"
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full bg-white"
+          {...props}
         />
       </AspectRatio>
 
