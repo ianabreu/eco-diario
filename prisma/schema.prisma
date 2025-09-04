@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Plant {
+  id               Int       @id @default(autoincrement())
+  name             String
+  scientificName   String?
+  image            String?
+  shortDescription String?
+  tip              String?
+  qualities        Quality[]
+  steps            Step[]
+
+  @@map("plants")
+}
+
+model Quality {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  plantId     Int
+  plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@map("qualities")
+}
+
+model Step {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  plantId     Int
+  plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@map("steps")
+}
