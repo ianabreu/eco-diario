@@ -1,0 +1,52 @@
+{
+  "id": 3,
+  "name": "Tomate-cereja",
+  "scientificName": "Solanum lycopersicum var. cerasiforme",
+  "image": "/plants/tomate-cereja.png",
+  "shortDescription": "Pequeno, suculento e cheio de sabor, o tomate-cereja é uma das melhores opções para quem quer cultivar tomates em espaços pequenos, como vasos e jardineiras. É uma planta que exige sol e cuidados, mas recompensa com uma colheita abundante e deliciosa.",
+  "qualities": [
+    {
+      "title": "Ideal para Vasos",
+      "description": "Seu porte menor faz dele a escolha perfeita para cultivo em varandas, sacadas ou pequenos espaços."
+    },
+    {
+      "title": "Produção Abundante",
+      "description": "Uma única planta pode produzir centenas de pequenos frutos ao longo da estação, garantindo uma colheita farta."
+    },
+    {
+      "title": "Versatilidade Culinária",
+      "description": "Perfeito para saladas, molhos, espetinhos e petiscos, adicionando um toque de cor e frescor."
+    },
+    {
+      "title": "Rápido Crescimento",
+      "description": "Cresce e amadurece relativamente rápido, permitindo que você desfrute dos frutos em poucas semanas."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "Plante na primavera ou no verão, pois o tomate-cereja adora clima quente e sol. Evite o plantio em épocas de frio intenso."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solo rico em matéria orgânica, bem drenado e levemente ácido. Use adubo orgânico para nutri-lo."
+    },
+    {
+      "title": "Luz",
+      "description": "Necessita de pelo menos 6 a 8 horas de sol direto por dia para crescer e frutificar bem."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo sempre úmido, regando consistentemente. Evite molhar as folhas para prevenir doenças."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "Se for plantar em canteiros, deixe cerca de 40 a 60 cm de distância entre as plantas para permitir que cresçam livremente."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha os tomates quando estiverem completamente maduros e com cor vibrante. Continue colhendo regularmente para incentivar a planta a produzir mais."
+    }
+  ],
+  "tip": "Transplante as mudas para um local definitivo quando elas tiverem entre 15 e 20 cm de altura. Use uma estaca ou suporte para ajudar a planta a se manter em pé e evitar que os frutos toquem o solo."
+}

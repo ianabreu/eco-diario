@@ -1,0 +1,52 @@
+{
+  "id": 9,
+  "name": "Pimentão",
+  "scientificName": "Capsicum annuum",
+  "image": "/plants/pimentao.png",
+  "shortDescription": "O pimentão é um vegetal colorido e saboroso que adiciona um toque especial a diversas receitas. É uma planta que adora sol e calor, sendo ideal para ser cultivada no verão e em locais com clima tropical ou subtropical.",
+  "qualities": [
+    {
+      "title": "Versatilidade",
+      "description": "Pode ser consumido cru em saladas, recheado, assado ou refogado, sendo um ingrediente-chave em muitas cozinhas."
+    },
+    {
+      "title": "Rica em Nutrientes",
+      "description": "É uma ótima fonte de vitaminas, especialmente vitamina C, e antioxidantes."
+    },
+    {
+      "title": "Variedade de Cores",
+      "description": "Com pimentões verdes, amarelos, vermelhos e até roxos, você pode dar mais cor e beleza à sua horta e aos seus pratos."
+    },
+    {
+      "title": "Adaptação",
+      "description": "Adapta-se bem ao cultivo em vasos grandes, desde que receba a luz solar necessária."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "O pimentão precisa de clima quente. A melhor época para o plantio é na primavera e no verão."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solo fértil, rico em matéria orgânica e com boa drenagem. Adicione composto orgânico à terra para um bom desenvolvimento."
+    },
+    {
+      "title": "Luz",
+      "description": "Necessita de bastante sol! Plante em um local que receba pelo menos 6 a 8 horas de sol direto por dia."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo úmido, regando de forma consistente. A falta de água pode prejudicar o crescimento e a produção dos frutos."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "Plante as mudas com cerca de 40 a 50 cm de distância uma da outra para que as plantas tenham espaço para se desenvolver."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha os pimentões quando estiverem com a cor e o tamanho desejados. Colher regularmente incentiva a planta a produzir mais frutos."
+    }
+  ],
+  "tip": "Para evitar que as pragas ataquem os seus pimentões, plante cebolinha ou alho por perto. Eles agem como repelentes naturais e ajudam a proteger sua horta."
+}

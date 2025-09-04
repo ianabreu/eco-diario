@@ -1,0 +1,52 @@
+{
+  "id": 10,
+  "name": "Coentro",
+  "scientificName": "Coriandrum sativum",
+  "image": "/plants/coentro.png",
+  "shortDescription": "O coentro é uma erva aromática de sabor e aroma marcantes, essencial em muitas culinárias ao redor do mundo. É uma planta que cresce rapidamente e é de fácil cultivo, sendo ideal para dar um toque especial aos seus pratos.",
+  "qualities": [
+    {
+      "title": "Sabor Único",
+      "description": "Com um sabor forte e fresco, o coentro é indispensável para dar personalidade a molhos, caldos e saladas."
+    },
+    {
+      "title": "Crescimento Rápido",
+      "description": "As folhas podem ser colhidas em poucas semanas, garantindo um suprimento constante de tempero fresco."
+    },
+    {
+      "title": "Versatilidade",
+      "description": "Tanto as folhas quanto as sementes podem ser usadas na cozinha, em diferentes pratos e receitas."
+    },
+    {
+      "title": "Ideal para Vasos",
+      "description": "Se adapta bem ao cultivo em vasos, desde que receba a luz e a rega necessárias."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "O coentro prefere clima ameno e fresco. O plantio no outono e inverno é o mais recomendado. Em locais muito quentes, prefira plantá-lo em meia-sombra."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solo leve, fértil, rico em matéria orgânica e com boa drenagem. Adube a terra com composto orgânico antes de plantar."
+    },
+    {
+      "title": "Luz",
+      "description": "Necessita de pelo menos 4 a 6 horas de sol por dia, mas em climas quentes, tolera a meia-sombra."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo sempre úmido, regando com frequência, mas evite encharcar."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "Plante as sementes em fileiras, com cerca de 20 a 30 cm de distância entre elas."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha as folhas externas da planta, na quantidade que você for utilizar. A colheita regular ajuda a planta a continuar produzindo."
+    }
+  ],
+  "tip": "Se a planta começar a florescer, colha as flores e as sementes. As sementes secas podem ser usadas como tempero em diversas receitas."
+}

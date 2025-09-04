@@ -1,0 +1,52 @@
+{
+  "id": 8,
+  "name": "Hortelã",
+  "scientificName": "Mentha spicata",
+  "image": "/plants/hortela.png",
+  "shortDescription": "A hortelã é uma erva aromática e refrescante, indispensável para chás, sucos, sobremesas e temperos. É uma das plantas mais fáceis de cultivar em casa, crescendo rapidamente e se adaptando bem a vasos e pequenos espaços.",
+  "qualities": [
+    {
+      "title": "Crescimento Rápido",
+      "description": "Uma das plantas de crescimento mais rápido, o que garante um suprimento constante de folhas frescas."
+    },
+    {
+      "title": "Aroma e Sabor",
+      "description": "Suas folhas exalam um aroma agradável e são perfeitas para dar um toque especial a diversas receitas."
+    },
+    {
+      "title": "Adaptabilidade",
+      "description": "Pode ser cultivada em vasos, canteiros ou até mesmo em ambientes internos com bastante luz."
+    },
+    {
+      "title": "Propriedades Medicinais",
+      "description": "É conhecida por auxiliar na digestão e aliviar dores de cabeça, sendo muito utilizada em chás e infusões."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "A hortelã se adapta bem a diferentes climas, mas o melhor período para o plantio é na primavera e no verão."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solo úmido, rico em matéria orgânica e com boa drenagem. Adicione composto orgânico à terra para um melhor desenvolvimento."
+    },
+    {
+      "title": "Luz",
+      "description": "Cresce melhor sob meia-sombra, recebendo luz solar indireta na maior parte do dia. Sol pleno pode queimar as folhas em climas mais quentes."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo sempre úmido. Regue com frequência, especialmente nos dias mais quentes, mas evite encharcar."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "A hortelã se espalha rapidamente! Se for plantar no canteiro, deixe bastante espaço ou use um vaso para controlar o crescimento."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha as folhas e os galhos mais novos. Para manter a planta cheia, pode-a periodicamente para evitar que as hastes fiquem longas e finas."
+    }
+  ],
+  "tip": "Hortelã e outras ervas do gênero Mentha se espalham rapidamente por meio de raízes subterrâneas. Plante-a em um vaso para evitar que ela 'invada' todo o canteiro e tome o espaço das outras plantas."
+}

@@ -1,0 +1,52 @@
+{
+  "id": 1,
+  "name": "Alface",
+  "scientificName": "Lactuca sativa",
+  "image": "/plants/alface.png",
+  "shortDescription": "A alface é uma das hortaliças mais populares e acessíveis, ideal para quem está começando uma horta. Com suas folhas crocantes e refrescantes, é a base de muitas saladas e uma ótima fonte de nutrientes.",
+  "qualities": [
+    {
+      "title": "Fácil de Cultivar",
+      "description": "Perfeita para jardineiros de primeira viagem, com poucas exigências de manejo."
+    },
+    {
+      "title": "Crescimento Rápido",
+      "description": "Em poucas semanas, suas folhas já estarão prontas para a colheita."
+    },
+    {
+      "title": "Produção Contínua",
+      "description": "Ao colher as folhas mais externas, a planta continua a produzir."
+    },
+    {
+      "title": "Adaptável",
+      "description": "Pode ser cultivada em canteiros, vasos e até jardineiras."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "Pode ser plantada durante todo o ano em Livramento do Brumado, desde que se evite os períodos de sol mais intenso durante o dia, preferindo o plantio em épocas mais amenas ou com sombreamento parcial nas horas mais quentes."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solos ricos em matéria orgânica, leves e bem drenados. Adicione composto orgânico para um bom desenvolvimento."
+    },
+    {
+      "title": "Luz",
+      "description": "Necessita de pelo menos 4 a 6 horas de sol direto por dia."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo sempre úmido, mas evite encharcar. Regue pela manhã ou no final da tarde."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "Plante as mudas com cerca de 20 a 30 cm de distância entre elas para que cresçam bem."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha as folhas externas quando estiverem bem desenvolvidas. Isso estimula a planta a produzir mais."
+    }
+  ],
+  "tip": "A alface roxa, além de ser linda na salada, é rica em antioxidantes! Experimente plantar diferentes variedades para dar mais cor e nutrição à sua horta."
+}

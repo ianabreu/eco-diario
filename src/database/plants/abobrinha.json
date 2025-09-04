@@ -1,0 +1,52 @@
+{
+  "id": 6,
+  "name": "Abobrinha",
+  "scientificName": "Cucurbita pepo",
+  "image": "/plants/abobrinha.png",
+  "shortDescription": "A abobrinha é um vegetal de crescimento rápido e alta produtividade, ideal para quem busca uma colheita farta. Seu sabor suave e textura macia a tornam versátil na cozinha, perfeita para saladas, sopas e refogados.",
+  "qualities": [
+    {
+      "title": "Crescimento Rápido",
+      "description": "Uma das hortaliças mais rápidas a dar frutos, permitindo várias colheitas em uma única estação."
+    },
+    {
+      "title": "Alta Produtividade",
+      "description": "Uma única planta de abobrinha pode gerar uma grande quantidade de frutos, garantindo fartura na sua horta."
+    },
+    {
+      "title": "Fácil de Cuidar",
+      "description": "É uma planta robusta, que não exige muitos cuidados e é tolerante a diferentes condições climáticas."
+    },
+    {
+      "title": "Versatilidade",
+      "description": "Pode ser usada de diversas formas na culinária, tanto em pratos salgados quanto doces."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Melhor Época",
+      "description": "A abobrinha adora calor. O melhor período para o plantio é na primavera e no verão. Evite plantá-la no inverno."
+    },
+    {
+      "title": "Solo Ideal",
+      "description": "Prefere solo fértil, rico em matéria orgânica e com boa drenagem. Adicione composto orgânico ou esterco para um bom crescimento."
+    },
+    {
+      "title": "Luz",
+      "description": "Necessita de muito sol. Plante em um local que receba pelo menos 6 a 8 horas de sol direto por dia."
+    },
+    {
+      "title": "Rega",
+      "description": "Mantenha o solo sempre úmido, mas evite molhar as folhas e os frutos para prevenir doenças fúngicas. Regue na base da planta."
+    },
+    {
+      "title": "Espaçamento",
+      "description": "Dê bastante espaço! Deixe cerca de 1 metro de distância entre as plantas para que elas possam crescer livremente e receber luz."
+    },
+    {
+      "title": "Colheita",
+      "description": "Colha as abobrinhas quando elas estiverem pequenas a médias (15-20 cm). Frutos maiores tendem a ser menos saborosos e ter mais sementes."
+    }
+  ],
+  "tip": "Verifique a sua planta diariamente, pois os frutos da abobrinha crescem muito rápido. Colher com frequência incentiva a planta a produzir ainda mais."
+}
