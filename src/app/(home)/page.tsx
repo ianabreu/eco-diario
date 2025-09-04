@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import { Card, LinkType } from "./_components/card";
+import { Title } from "@/components/title";
 
 export default function Home() {
   const links: LinkType[] = [
@@ -26,7 +27,7 @@ export default function Home() {
   ];
   return (
     <Section>
-      <h1 className="font-bold text-lg">Bem Vindo ao EcoDiário!</h1>
+      <Title as="h1">Bem Vindo ao EcoDiário!</Title>
       <p className="text-sm">Seu guia diário para um futuro mais verde.</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
         {links.map((link) => (

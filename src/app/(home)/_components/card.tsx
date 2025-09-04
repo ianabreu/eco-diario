@@ -1,3 +1,4 @@
+import { Title } from "@/components/title";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -37,7 +38,7 @@ export function Card({ link }: CardProps) {
           `${bgColor} ${textColor} ${borderColor}`
         )}
       >
-        <h2 className="font-bold text-lg">{link.label}</h2>
+        <Title size="medium">{link.label}</Title>
         <p className="text-base">{link.content}</p>
       </div>
     </Link>

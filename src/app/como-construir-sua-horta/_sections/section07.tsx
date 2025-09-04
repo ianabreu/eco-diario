@@ -1,17 +1,21 @@
 import { Section } from "@/components/section";
-import { Col, Grid, ImageCard, Title } from "../_components";
+import { Col, Grid } from "../_components";
+import { ImageCard } from "@/components/image-card";
+import { Title } from "@/components/title";
 
 export function Section07() {
   return (
     <Section>
-      <Title>Do Recipiente ao Solo: Dando Vida à Sua Horta</Title>
+      <div className="mb-4 text-center">
+        <Title>Do Recipiente ao Solo</Title>
+      </div>
       <Grid>
         <Col>
           <p>
             Para começar sua horta, você pode plantar diretamente no solo já
             preparado ou iniciar suas sementes em recipientes menores.
           </p>
-          <Title size="md" className="text-left my-0">
+          <Title as="h3" size="medium">
             Para a Germinação:
           </Title>
           <ol className="flex flex-col gap-2">
@@ -33,7 +37,7 @@ export function Section07() {
               luz indireta até as primeiras mudinhas aparecerem.
             </li>
           </ol>
-          <Title size="md" className="text-left my-1">
+          <Title as="h3" size="medium">
             Transplantando para a Horta:
           </Title>
           <p>

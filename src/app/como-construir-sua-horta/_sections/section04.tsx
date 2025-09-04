@@ -1,10 +1,15 @@
 import { Section } from "@/components/section";
-import { Col, Grid, ImageCard, Title } from "../_components";
+import { Col, Grid } from "../_components";
+import { ImageCard } from "@/components/image-card";
+import { Title } from "@/components/title";
 
 export function Section04() {
   return (
     <Section>
-      <Title>Ferramentas Essenciais</Title>
+      <div className="mb-4 text-center">
+        <Title>Ferramentas Essenciais</Title>
+      </div>
+
       <Grid>
         <Col>
           <p>

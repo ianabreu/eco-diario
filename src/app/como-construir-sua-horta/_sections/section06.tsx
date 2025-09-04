@@ -1,10 +1,14 @@
 import { Section } from "@/components/section";
-import { Col, Grid, ImageCard, Title } from "../_components";
+import { Col, Grid } from "../_components";
+import { ImageCard } from "@/components/image-card";
+import { Title } from "@/components/title";
 
 export function Section06() {
   return (
     <Section>
-      <Title>Escolha as plantas certas</Title>
+      <div className="mb-4 text-center">
+        <Title>Escolha as plantas certas</Title>
+      </div>
       <Grid>
         <Col>
           <p>
