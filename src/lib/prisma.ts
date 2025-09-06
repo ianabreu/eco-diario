@@ -1,11 +1,13 @@
-import { PrismaClient } from "@/generated/prisma";
+import { PrismaClient } from "../generated/prisma";
+import { withAccelerate } from "@prisma/extension-accelerate";
 
-let prisma: PrismaClient;
+const globalForPrisma = global as unknown as {
+  prisma: PrismaClient;
+};
 
-if (process.env.NODE_ENV !== "production") {
-  prisma = new PrismaClient();
-} else {
-  prisma = {} as PrismaClient;
-}
+const prisma =
+  globalForPrisma.prisma || new PrismaClient().$extends(withAccelerate());
 
-export { prisma as prismaClient };
+if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+
+export default prisma;

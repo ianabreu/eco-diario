@@ -7,12 +7,13 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Plant {
-  id               Int       @id @default(autoincrement())
+  id               String       @id @default(uuid())
   name             String
   scientificName   String?
   image            String?
@@ -25,20 +26,20 @@ model Plant {
 }
 
 model Quality {
-  id          Int    @id @default(autoincrement())
+  id          String    @id @default(uuid())
   title       String
   description String
-  plantId     Int
+  plantId     String
   plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 
   @@map("qualities")
 }
 
 model Step {
-  id          Int    @id @default(autoincrement())
+  id          String    @id @default(uuid())
   title       String
   description String
-  plantId     Int
+  plantId     String
   plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 
   @@map("steps")

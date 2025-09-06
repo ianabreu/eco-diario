@@ -1,7 +1,6 @@
-export const dynamic = "force-dynamic";
+import { getPlantDetails } from "@/actions/plants";
 import { Section } from "@/components/section";
 import { Title } from "@/components/title";
-import { prismaClient } from "@/lib/prisma";
 import Image from "next/image";
 import { redirect, RedirectType } from "next/navigation";
 
@@ -9,14 +8,8 @@ interface PlantPageProps {
   params: Promise<{ id: string }>;
 }
 export default async function PlantPage({ params }: PlantPageProps) {
-  const id: number = Number((await params).id);
-  if (isNaN(id)) {
-    redirect("/plantas", RedirectType.replace);
-  }
-  const plant = await prismaClient.plant.findUnique({
-    where: { id },
-    include: { qualities: true, steps: true },
-  });
+  const id = (await params).id;
+  const plant = await getPlantDetails(id);
   if (plant === null) {
     redirect("/plantas", RedirectType.replace);
   }
