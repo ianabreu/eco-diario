@@ -1,16 +1,19 @@
 import path from "node:path";
 import { defineConfig } from "prisma/config";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default defineConfig({
   schema: path.join("prisma", "schema.prisma"),
   migrations: {
-    path: path.join("db", "migrations"),
+    path: path.join("prisma", "migrations"),
     seed: "tsx prisma/seed.ts",
   },
   views: {
-    path: path.join("db", "views"),
+    path: path.join("prisma", "views"),
   },
   typedSql: {
-    path: path.join("db", "queries"),
+    path: path.join("prisma", "queries"),
   },
 });

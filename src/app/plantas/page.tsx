@@ -1,12 +1,10 @@
 import { Section } from "@/components/section";
 import { Title } from "@/components/title";
-import { PlantSummary } from "@/types";
 import { getPlantsSummary } from "@/actions/plants";
 import { Item } from "./_components/Item";
 
 export default async function PlantsPage() {
-  const plants: PlantSummary[] = await getPlantsSummary();
-
+  const plants = await getPlantsSummary();
   return (
     <Section>
       <Title>Plantas Ideais</Title>

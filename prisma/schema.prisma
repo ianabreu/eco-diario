@@ -13,34 +13,28 @@ datasource db {
 }
 
 model Plant {
-  id               String       @id @default(uuid())
-  name             String
-  scientificName   String?
-  image            String?
-  shortDescription String?
-  tip              String?
-  qualities        Quality[]
-  steps            Step[]
+  id                  String  @id @default(uuid())
+  name                String
+  scientificName      String
+  image_url           String
+  description         String
+  howToPlant          String
+  tips                String
+  climate             String
+  germination         String
+  plantInfo PlantInfo[]
 
-  @@map("plants")
+  @@map("plant")
 }
 
-model Quality {
-  id          String    @id @default(uuid())
-  title       String
-  description String
-  plantId     String
-  plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 
-  @@map("qualities")
-}
+model PlantInfo {
+  id              String       @id @default(uuid())
+  order           Int
+  title           String
+  description     String
+  plant           Plant @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  plantId         String
 
-model Step {
-  id          String    @id @default(uuid())
-  title       String
-  description String
-  plantId     String
-  plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-
-  @@map("steps")
+  @@map("plant_info")
 }
