@@ -20,8 +20,8 @@
   --accent-foreground: #1b5e20;
   --destructive: #c62828;
   --destructive-foreground: #ffffff;
-  --border: #e0d6c9;
-  --input: #e0d6c9;
+  --border: #b8b8b8;
+  --input: #b8b8b8;
   --ring: #2e7d32;
   --chart-1: #4caf50;
   --chart-2: #388e3c;
@@ -34,7 +34,7 @@
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #c8e6c9;
   --sidebar-accent-foreground: #1b5e20;
-  --sidebar-border: #e0d6c9;
+  --sidebar-border: #b8b8b8;
   --sidebar-ring: #2e7d32;
   --font-sans: Montserrat, sans-serif;
   --font-serif: Merriweather, serif;

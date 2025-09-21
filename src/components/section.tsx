@@ -1,8 +1,14 @@
-interface SectionProps {
-  children: React.ReactNode;
-}
-export function Section({ children }: SectionProps) {
+import { cn } from "@/lib/utils";
+import { HTMLAttributes } from "react";
+
+type SectionProps = HTMLAttributes<HTMLElement>;
+export function Section({ children, className, ...rest }: SectionProps) {
   return (
-    <section className="bg-white p-2 rounded-lg shadow-md">{children}</section>
+    <section
+      className={cn("bg-white p-2 rounded-lg shadow-md", className)}
+      {...rest}
+    >
+      {children}
+    </section>
   );
 }

@@ -7,34 +7,52 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
 
 model Plant {
-  id                  String  @id @default(uuid())
-  name                String
-  scientificName      String
-  image_url           String
-  description         String
-  howToPlant          String
-  tips                String
-  climate             String
-  germination         String
-  plantInfo PlantInfo[]
+  id             String      @id @default(uuid())
+  name           String
+  scientificName String
+  image_url      String
+  description    String
+  howToPlant     String
+  tips           String
+  climate        String
+  germination    String
+  plantInfo      PlantInfo[]
 
   @@map("plant")
 }
 
-
 model PlantInfo {
-  id              String       @id @default(uuid())
-  order           Int
-  title           String
-  description     String
-  plant           Plant @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  plantId         String
+  id          String @id @default(uuid())
+  order       Int
+  title       String
+  description String
+  plant       Plant  @relation(fields: [plantId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  plantId     String
 
   @@map("plant_info")
+}
+
+model Question {
+  id           String        @id @default(uuid())
+  question     String
+  alternatives Alternative[]
+
+  @@map("question")
+}
+
+model Alternative {
+  id          String   @id @default(uuid())
+  content     String
+  isCorrect   Boolean  @default(false)
+  explanation String?
+  question    Question @relation(fields: [questionId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  questionId  String
+
+  @@map("question_alternative")
 }

@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 
 const montserrat = Montserrat({
-  weight: ["500", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-montserrat",
   style: "normal",
   subsets: ["latin"],
