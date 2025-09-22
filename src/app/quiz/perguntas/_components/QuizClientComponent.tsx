@@ -11,20 +11,10 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { QuestionWithAlternativeProps } from "@/actions/quiz";
 
 interface QuizClientComponentProps {
-  questions: Question[];
-}
-interface Question {
-  id: string;
-  question: string;
-  alternatives: Alternative[];
-}
-export interface Alternative {
-  id: string;
-  content: string;
-  isCorrect: boolean;
-  explanation?: string;
+  questions: QuestionWithAlternativeProps[];
 }
 interface UserAnswer {
   questionId: string;
