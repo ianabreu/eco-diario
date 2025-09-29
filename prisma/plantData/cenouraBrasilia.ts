@@ -1,9 +1,11 @@
 import { Prisma } from "@/generated/prisma";
 
 export const cenouraBrasilia: Prisma.PlantCreateInput = {
+  id: "2",
   name: "Cenoura Brasília",
   scientificName: "Daucus carota",
-  image_url: "/plants/cenoura.png",
+  image_url:
+    "https://res.cloudinary.com/ddiv5waqs/image/upload/v1759118769/cenoura-brasilia_omqpke.webp",
   howToPlant:
     "Revolva o solo no mínimo 20 cm de profundidade até que fique solto, sem a presença de torrões. Para melhorar o solo, adicione esterco e/ou húmus na proporção de 10%. Misture adubo balanceado NPK considerando 300g para cada 10m2 de canteiro. Para plantio em vasos, use substrato e adicione 5g de adubo por litro de vaso. Semeie conforme a tabela. Após o plantio, manter o solo e/ou substrato úmido, sem encharcar, para obter melhores resultados.",
   climate: "Clima quente",

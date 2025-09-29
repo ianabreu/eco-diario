@@ -2,6 +2,7 @@ import { Prisma } from "@/generated/prisma";
 
 export const questionsSeed: Prisma.QuestionCreateInput[] = [
   {
+    id: "1",
     question: "Qual é a principal vantagem de praticar a compostagem em casa?",
     alternatives: {
       createMany: {
@@ -36,6 +37,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "2",
     question: "Qual é a principal fonte de energia renovável no Brasil?",
     alternatives: {
       createMany: {
@@ -65,6 +67,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "3",
     question: "Qual prática ajuda a reduzir o gasto de energia em residências?",
     alternatives: {
       createMany: {
@@ -96,6 +99,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "4",
     question: "Qual atitude mais ajuda a fortalecer a economia local?",
     alternatives: {
       createMany: {
@@ -125,6 +129,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "5",
     question: "O que significa consumo consciente?",
     alternatives: {
       createMany: {
@@ -154,6 +159,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "6",
     question: "Qual é o benefício de uma horta comunitária?",
     alternatives: {
       createMany: {
@@ -184,6 +190,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "7",
     question: "Qual é uma forma simples de economizar água em casa?",
     alternatives: {
       createMany: {
@@ -213,6 +220,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "8",
     question: "Por que separar o lixo reciclável do orgânico?",
     alternatives: {
       createMany: {
@@ -243,6 +251,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "9",
     question: "Qual alternativa é um exemplo de energia renovável?",
     alternatives: {
       createMany: {
@@ -272,6 +281,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "10",
     question: "Qual prática reduz o desperdício de alimentos em casa?",
     alternatives: {
       createMany: {
@@ -301,6 +311,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "11",
     question:
       "Qual impacto positivo o uso de bicicletas pode trazer à comunidade?",
     alternatives: {
@@ -331,6 +342,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "12",
     question:
       "Qual medida simples pode diminuir o uso de plásticos descartáveis?",
     alternatives: {
@@ -361,6 +373,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "13",
     question: "O que é economia circular?",
     alternatives: {
       createMany: {
@@ -391,6 +404,7 @@ export const questionsSeed: Prisma.QuestionCreateInput[] = [
     },
   },
   {
+    id: "14",
     question: "Por que reutilizar garrafas de vidro é uma prática sustentável?",
     alternatives: {
       createMany: {

@@ -1,8 +1,8 @@
+import { PlantsSummary } from "@/actions/plants";
 import { ImageCard } from "@/components/image-card";
-import { Plant } from "@/generated/prisma";
 import Link from "next/link";
 interface ItemProps {
-  plant: Pick<Plant, "id" | "name" | "image_url">;
+  plant: PlantsSummary;
 }
 export function Item({ plant }: ItemProps) {
   return (

@@ -1,9 +1,11 @@
 import { Prisma } from "@/generated/prisma";
 
 export const aboboraBahiana: Prisma.PlantCreateInput = {
+  id: "1",
   name: "Abóbora Bahiana Tropical",
   scientificName: "Cucurbita moschata",
-  image_url: "/plants/abobrinha.png",
+  image_url:
+    "https://res.cloudinary.com/ddiv5waqs/image/upload/v1759118274/abobora-baiana-tropical_ulhl1u.webp",
   howToPlant:
     "Revolva o solo no mínimo 20 cm de profundidade até que fique solto, sem a presença de torrões. Para melhorar o solo, adicione esterco e/ou húmus na proporção de 10%. Misture adubo balanceado NPK considerando 300g para cada 10m2 de canteiro. Para plantio em vasos, use substrato e adicione 5g de adubo por litro de vaso. Semeie conforme a tabela abaixo. Após o plantio, manter o solo e/ou substrato úmido, sem encharcar, para obter melhores resultados.",
   climate: "Clima quente",

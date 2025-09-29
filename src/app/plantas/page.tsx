@@ -1,18 +1,21 @@
 import { Section } from "@/components/section";
 import { Title } from "@/components/title";
 import { getPlantsSummary } from "@/actions/plants";
-import { Item } from "./_components/Item";
+import List from "./_components/List";
 
-export default async function PlantsPage() {
-  const plants = await getPlantsSummary();
+interface PlantPageProps {
+  searchParams: Promise<{ query: string; limit: string; page: string }>;
+}
+export default async function PlantsPage({ searchParams }: PlantPageProps) {
+  const { query, limit, page } = await searchParams;
+  const limitPerPage = parseInt(limit) || 8;
+  const offset = parseInt(page) || 0;
+  const plants = await getPlantsSummary(query, limitPerPage, offset);
+
   return (
     <Section>
       <Title>Plantas Ideais</Title>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
-        {plants.length === 0 && <p>Vazio</p>}
-        {plants.length > 0 &&
-          plants.map((plant) => <Item key={plant.id} plant={plant} />)}
-      </div>
+      <List data={plants} />
     </Section>
   );
 }
