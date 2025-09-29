@@ -9,9 +9,23 @@ import {
   ChevronRightIcon,
   XIcon,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { QuestionWithAlternativeProps } from "@/actions/quiz";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { ResultData, ResultPage } from "./Results";
+import { Dialog } from "@/components/ui/dialog";
+import { redirect, RedirectType } from "next/navigation";
 
 interface QuizClientComponentProps {
   questions: QuestionWithAlternativeProps[];
@@ -28,6 +42,8 @@ export default function QuizClientComponent({
   questions,
 }: QuizClientComponentProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+  const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [result, setResult] = useState<ResultData | null>(null);
 
   const [userAnswers, setUserAnswers] = useState<UserAnswer[]>(
     questions.map((q) => ({
@@ -46,8 +62,7 @@ export default function QuizClientComponent({
   >(null);
 
   const currentQuestion = questions[currentQuestionIndex];
-  // const currentUserAnswer = userAnswers[currentQuestionIndex];
-  // const isLastQuestion = currentQuestionIndex === questions.length - 1;
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
 
   function handleSelectAlternative(alternativeIndex: number) {
     if (questionStatus === "unanswered") {
@@ -88,9 +103,27 @@ export default function QuizClientComponent({
     );
   }
 
-  // function handleFinalize() {
-  //   setQuizStatus("finished");
-  // }
+  function handleFinalize() {
+    const data = userAnswers.reduce(
+      (acc, answer) => {
+        // 1. Acertos
+        if (answer.isCorrect === true) {
+          acc.correct += 1;
+          // 2. Erros
+        } else if (answer.isCorrect === false) {
+          acc.wrong += 1;
+          // 3. Ignoradas (isCorrect ainda é null)
+        } else if (answer.isCorrect === null) {
+          acc.ignored += 1;
+        }
+        return acc;
+      },
+      { correct: 0, wrong: 0, ignored: 0, total: userAnswers.length }
+    );
+
+    setIsFinished(true);
+    setResult(data);
+  }
 
   const getAnswerClass = (index: number) => {
     const isSelected = index === selectedAlternativeIndex;
@@ -114,6 +147,21 @@ export default function QuizClientComponent({
         : "bg-white border-gray-300 text-gray-800";
     }
   };
+  function reset() {
+    redirect("/quiz", RedirectType.replace);
+  }
+  useEffect(() => {
+    if (!isFinished) {
+      const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+        event.preventDefault();
+        event.returnValue = "";
+      };
+      window.addEventListener("beforeunload", handleBeforeUnload);
+      return () => {
+        window.removeEventListener("beforeunload", handleBeforeUnload);
+      };
+    }
+  }, [isFinished]);
 
   return (
     <Section>
@@ -210,16 +258,57 @@ export default function QuizClientComponent({
         <div className="text-sm font-bold text-gray-700">
           {currentQuestionIndex + 1} de {questions.length}
         </div>
-        <Button
-          size={"default"}
-          disabled={false}
-          onClick={() => {
-            handleNavigation("next");
-          }}
-        >
-          <ChevronRightIcon />
-        </Button>
+        {!isLastQuestion ? (
+          <Button
+            size={"default"}
+            disabled={currentQuestionIndex === questions.length - 1}
+            onClick={() => {
+              handleNavigation("next");
+            }}
+          >
+            <ChevronRightIcon />
+          </Button>
+        ) : (
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button
+                size={"default"}
+                disabled={currentQuestionIndex !== questions.length - 1}
+              >
+                Finalizar
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  Tem certeza que deseja terminar?
+                </AlertDialogTitle>
+                <AlertDialogDescription>
+                  Ao confirmar, você não poderá mais alterar suas respostas. Seu
+                  resultado será calculado e exibido.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Voltar</AlertDialogCancel>
+                <AlertDialogAction onClick={handleFinalize}>
+                  Sim, Finalizar
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        )}
       </div>
+      {result && (
+        <Dialog open={isFinished}>
+          <ResultPage
+            data={result}
+            onRestart={reset}
+            onExit={() => {
+              redirect("/", RedirectType.replace);
+            }}
+          />
+        </Dialog>
+      )}
     </Section>
   );
 }
