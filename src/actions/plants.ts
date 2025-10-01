@@ -2,23 +2,51 @@
 import { Plant } from "@/generated/prisma";
 import prisma from "@/lib/prisma";
 export type PlantsSummary = Pick<Plant, "id" | "name" | "image_url">;
-export async function getPlantsSummary(
-  query: string,
-  limit: number = 8,
-  offset: number = 0
-): Promise<PlantsSummary[]> {
+
+interface GetPlantSummaryProps {
+  search?: string;
+  limit?: number;
+  page?: number;
+}
+export async function getPlantsSummary({
+  search,
+  limit = 8,
+  page = 1,
+}: GetPlantSummaryProps) {
+  if (page < 1) page = 1;
+  if (limit < 1) limit = 8;
+  if (limit > 32) limit = 32;
+  const offset = (page - 1) * limit;
+
   try {
-    const plants = await prisma.plant.findMany({
-      where: { name: { contains: query, mode: "insensitive" } },
-      orderBy: { name: "asc" },
-      skip: offset,
-      take: limit,
-      select: { id: true, image_url: true, name: true },
-    });
-    return plants;
+    const [plants, total] = await Promise.all([
+      prisma.plant.findMany({
+        where: { name: { contains: search, mode: "insensitive" } },
+        orderBy: { name: "asc" },
+        skip: offset,
+        take: limit,
+        select: { id: true, image_url: true, name: true },
+      }),
+
+      prisma.plant.count({
+        where: { name: { contains: search, mode: "insensitive" } },
+      }),
+    ]);
+
+    const last_page = Math.ceil(total / limit);
+    return {
+      data: plants,
+      meta: {
+        total,
+        last_page,
+        current_page: page,
+        has_next_page: page < last_page,
+        has_previous_page: page > 1,
+      },
+    };
   } catch (error) {
     console.log(error);
-    return [];
+    throw new Error("Erro ao buscar dados");
   }
 }
 export async function getPlantDetails(plantId: string) {
