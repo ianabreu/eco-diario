@@ -1,5 +1,4 @@
 import { PlantInfo } from "@/generated/prisma";
-import { Sprout, Calendar, Flower2 } from "lucide-react";
 
 interface PlantDetailProps {
   info: PlantInfo[];
@@ -19,9 +18,7 @@ export function PlantDetailHybrid({ info }: PlantDetailProps) {
           >
             <span className="text-nowrap">{item.title}</span>
           </div>
-
-          {/* Value */}
-          <span className="text-gray-600 group-hover:text-green-700">
+          <span className="text-gray-600 group-hover:text-green-700 text-center">
             {item.description}
           </span>
         </div>

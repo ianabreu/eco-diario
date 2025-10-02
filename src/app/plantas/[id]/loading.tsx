@@ -4,21 +4,29 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
-    <Section>
-      <Skeleton className="w-full h-64 rounded-xl bg-gray-200" />
-
-      <div className="mt-4 flex flex-col items-center">
-        <Skeleton className="w-40 h-6 mb-1 rounded-sm bg-gray-200" />
-        <Skeleton className="w-36 h-6 rounded-sm bg-gray-200" />
-        <Title as="h3" className="mt-8 mb-4">
-          Descrição
-        </Title>
-        <Skeleton className="w-80 h-6 mt-2 rounded-sm bg-gray-200" />
-        <Title as="h3" className="mt-8 mb-4">
-          Como Plantar
-        </Title>
-        <Skeleton className="w-full h-44 mt-2 rounded-sm bg-gray-200" />
+    <Section className="mt-4">
+      <div className="flex gap-4 flex-col md:flex-row-reverse justify-center">
+        <Skeleton className="h-44 w-full max-w-96" />
+        <div className="flex flex-col flex-1 gap-2">
+          <Skeleton className="h-9 w-full " />
+          <Skeleton className="h-9 w-full " />
+          <Skeleton className="h-9 w-full " />
+          <Skeleton className="h-9 w-full " />
+        </div>
       </div>
+      <div className="flex flex-col gap-4 items-center mt-2">
+        <Skeleton className="h-9 w-full" />
+
+        <Skeleton className="h-9 w-full" />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 w-full">
+          <Skeleton className="h-20 w-full" />
+          <Skeleton className="h-20 w-full" />
+          <Skeleton className="h-20 w-full" />
+        </div>
+      </div>
+
+      <Skeleton className="mt-8 h-20 w-full" />
     </Section>
   );
 }
