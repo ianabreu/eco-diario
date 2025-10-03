@@ -1,5 +1,4 @@
 import { Section } from "@/components/section";
-import { Title } from "@/components/title";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Loading() {

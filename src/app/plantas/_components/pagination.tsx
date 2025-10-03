@@ -2,7 +2,6 @@
 import {
   Pagination as PaginationComponent,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -11,15 +10,12 @@ import {
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 interface PaginationProps {
   meta: {
-    total: number;
     last_page: number;
     current_page: number;
-    has_next_page: boolean;
-    has_previous_page: boolean;
   };
 }
 export default function Pagination({
-  meta: { current_page, has_next_page, has_previous_page, last_page, total },
+  meta: { current_page, last_page },
 }: PaginationProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -84,33 +80,6 @@ export default function Pagination({
             onClick={() => handleClickPage(current_page + 1)}
           />
         </PaginationItem>
-        {/* <PaginationItem>
-          <PaginationPrevious />
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink isActive={true}>1</PaginationLink>
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink>2</PaginationLink>
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink>3</PaginationLink>
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationEllipsis />
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink>8</PaginationLink>
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink>9</PaginationLink>
-        </PaginationItem>
-        <PaginationItem className="hidden md:inline-flex">
-          <PaginationLink>10</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationNext />
-        </PaginationItem> */}
       </PaginationContent>
     </PaginationComponent>
   );
