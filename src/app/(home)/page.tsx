@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <Section>
-      <div className="text-center py-12 mb-8 bg-gray-100 rounded-xl shadow-inner">
+      <div className="text-center py-12 mb-8 rounded-xl shadow-inners">
         <Title
           as="h1"
           size="large"
