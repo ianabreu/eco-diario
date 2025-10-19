@@ -12,8 +12,48 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "EcoDiário",
-  description: "",
+  title: "Eco Diário - Educação e Práticas Sustentáveis",
+  description:
+    "O Eco Diário é um projeto de educação ambiental que une tecnologia e conscientização. Promove práticas sustentáveis, consumo responsável e economia verde para transformar comunidades e incentivar o desenvolvimento sustentável.",
+  keywords: [
+    "sustentabilidade",
+    "economia verde",
+    "consumo consciente",
+    "reciclagem",
+    "meio ambiente",
+    "educação ambiental",
+    "eco diário",
+    "desenvolvimento sustentável",
+  ],
+  authors: [{ name: "Ian Abreu", url: "https://br.linkedin.com/in/ian-abreu" }],
+  openGraph: {
+    title: "Eco Diário - Educação e Práticas Sustentáveis",
+    description:
+      "Descubra o Eco Diário, um projeto que promove sustentabilidade e educação ambiental por meio da tecnologia. Pequenas ações, grandes mudanças!",
+    url: "https://eco-diario.vercel.app",
+    siteName: "Eco Diário",
+    images: [
+      {
+        url: "https://eco-diario.vercel.app/imagens/og-image-eco-diario.svg",
+        width: 1200,
+        height: 630,
+        alt: "Eco Diário - Sustentabilidade e Educação Ambiental",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eco Diário - Educação e Práticas Sustentáveis",
+    description:
+      "Aprenda práticas sustentáveis com o Eco Diário. Educação e tecnologia unidas para um futuro melhor.",
+    images: ["https://eco-diario.vercel.app/imagens/og-image-eco-diario.svg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

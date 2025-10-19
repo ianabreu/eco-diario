@@ -7,14 +7,13 @@ export function Logo() {
       <div draggable={false} className="flex flex-row items-center gap-2">
         <Image
           draggable={false}
-          src={"/icon.png"}
-          width={48}
-          height={48}
-          alt="Logo do site"
+          src={"/imagens/logo.svg"}
+          width={0}
+          height={0}
+          sizes="100vw"
+          alt="Eco Diário Logotipo"
+          className="object-contain w-full h-full max-w-[180px]"
         />
-        <span draggable={false} className="font-bold text-base select-none">
-          EcoDiário
-        </span>
       </div>
     </Link>
   );
