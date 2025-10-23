@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default async function LoadingPage() {
   return (
-    <Section className="min-h-[calc(100svh_-_64px)] h-full flex flex-col">
+    <Section className="h-full flex flex-col">
       <Skeleton className="mb-2 h-9 w-56" />
       <Skeleton className=" h-12 w-96" />
       <div className="flex-1">

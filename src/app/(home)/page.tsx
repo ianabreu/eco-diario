@@ -14,14 +14,14 @@ export default function Home() {
     },
     {
       href: "/como-construir-sua-horta",
-      label: "Guia Rápido de Horta",
+      label: "Criando sua Horta",
       content:
         "Passos essenciais para planejar e montar sua horta em casa, do zero, em qualquer espaço.",
       color: "red",
     },
     {
       href: "/plantas",
-      label: "Catálogo de Plantas",
+      label: "Guia de Plantas",
       content:
         "Conheça vegetais e ervas ideais para iniciantes, com dicas de cultivo e manejo.",
       color: "green",

@@ -8,49 +8,74 @@ import { PlantDetailHybrid as PlantDetailCard } from "../_components/PlantDetail
 interface PlantPageProps {
   params: Promise<{ id: string }>;
 }
+
 export default async function PlantPage({ params }: PlantPageProps) {
   const id = (await params).id;
   const plant = await getPlantDetails(id);
+
   if (plant === null) {
     redirect("/plantas", RedirectType.replace);
   }
+
   return (
-    <Section className="mt-4">
-      <div className="flex gap-4 flex-col md:flex-row-reverse items-center ">
+    <Section className="p-4 md:p-8 min-h-screen">
+      <div className="flex flex-col md:flex-row-reverse md:gap-8 gap-6 items-start mb-10">
         {plant.image_url && (
-          <div className="h-64 w-full rounded-xl shadow overflow-hidden max-w-96">
-            <Image
-              src={plant.image_url}
-              alt={plant.name}
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="object-cover w-full h-full"
-            />
+          <div className="w-full md:w-1/3 flex-shrink-0">
+            <div className="aspect-square w-full rounded-2xl shadow-xl overflow-hidden">
+              <Image
+                src={plant.image_url}
+                alt={plant.name}
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
         )}
-        <div className="text-center flex flex-col justify-center items-center h-full gap-2">
-          <Title as="h1">{plant.name}</Title>
-          <p className="italic text-gray-600">{plant.scientificName}</p>
-          <Title as="h3">Descrição</Title>
-          <p className="text-lg">{plant.description}</p>
+
+        <div className="w-full md:w-2/3 flex flex-col justify-start items-start">
+          <Title
+            as="h1"
+            className="text-3xl md:text-4xl font-extrabold mb-1 text-gray-800"
+          >
+            {plant.name}
+          </Title>
+          <p className="italic text-lg text-green-700 font-medium mb-4">
+            {plant.scientificName}
+          </p>
+
+          <h3 className="text-xl font-semibold mb-2 mt-4 text-gray-700">
+            Descrição
+          </h3>
+          <p className="text-base leading-relaxed text-gray-600">
+            {plant.description}
+          </p>
         </div>
       </div>
-      <div className="flex flex-col gap-4 items-center mt-2">
-        <Title as="h3" className="">
-          Como Plantar
+
+      <div className="my-8 p-6 bg-green-50 rounded-xl border-l-4 border-green-500 shadow-md">
+        <Title as="h2" className="text-2xl font-bold mb-4 text-green-700">
+          🌱 Como Plantar
         </Title>
-        <p className="mt-2 text-lg text-left">{plant.howToPlant}</p>
-        <Title as="h3" className="">
+        <p className="text-base leading-relaxed text-gray-700 whitespace-pre-line">
+          {plant.howToPlant}
+        </p>
+      </div>
+
+      <div className="mt-8">
+        <Title as="h2" className="text-2xl font-bold mb-6 text-gray-800">
           Informações Gerais
         </Title>
         <PlantDetailCard info={plant.plantInfo} />
       </div>
 
       {plant.tips && (
-        <div className="mt-8 bg-green-50 p-4 rounded-xl border border-green-700 text-green-700">
-          <h3 className="font-bold">🌿 Curiosidade</h3>
-          <p>{plant.tips}</p>
+        <div className="mt-10 bg-yellow-50 p-5 rounded-xl border-l-4 border-yellow-500 text-gray-800 shadow-md">
+          <h3 className="font-bold text-xl mb-1 text-yellow-800">
+            💡 Dica Rápida
+          </h3>
+          <p className="text-base">{plant.tips}</p>
         </div>
       )}
     </Section>

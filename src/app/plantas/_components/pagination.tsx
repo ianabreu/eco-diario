@@ -52,7 +52,7 @@ export default function Pagination({
     } else {
       params.delete("page");
     }
-    replace(`${pathname}?${params.toString()}`, { scroll: false });
+    replace(`${pathname}?${params.toString()}`, { scroll: true });
   }
 
   return (
