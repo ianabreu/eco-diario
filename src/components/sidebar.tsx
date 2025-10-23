@@ -30,7 +30,12 @@ export function Siderbar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant={"ghost"} size={"icon"} className="hover:bg-gray-100">
+        <Button
+          variant={"ghost"}
+          size={"icon"}
+          className="hover:bg-gray-100"
+          aria-label="Abrir menu lateral com links de navegação"
+        >
           <Menu className="h-6 w-6 text-gray-700" />
         </Button>
       </SheetTrigger>
@@ -48,6 +53,7 @@ export function Siderbar() {
                 <li key={link.href}>
                   <SheetClose asChild>
                     <Link
+                      aria-label={"Ir para " + link.label}
                       href={link.href}
                       className={`
                         rounded-lg p-3 flex items-center gap-4 transition-all duration-200 

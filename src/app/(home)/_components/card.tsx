@@ -41,7 +41,7 @@ export function Card({ link: { content, href, label, color } }: CardProps) {
   const IconComponent = theme.icon;
 
   return (
-    <Link href={href} className="w-full">
+    <Link href={href} className="w-full" aria-label={label}>
       <div
         className={cn(
           "rounded-xl border border-gray-100 p-6 shadow-md transition-all duration-300",

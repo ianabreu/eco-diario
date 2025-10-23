@@ -154,7 +154,7 @@ export default function QuizClientComponent({
     if (!isFinished) {
       const handleBeforeUnload = (event: BeforeUnloadEvent) => {
         event.preventDefault();
-        event.returnValue = "";
+        // event.returnValue = "";
       };
       window.addEventListener("beforeunload", handleBeforeUnload);
       return () => {
@@ -173,6 +173,7 @@ export default function QuizClientComponent({
         <div className="flex flex-col gap-3">
           {currentQuestion.alternatives.map((option, index) => (
             <button
+              aria-label={`Alternativa ${index + 1}: ${option.content}`}
               type="button"
               key={index}
               onClick={() => handleSelectAlternative(index)}
@@ -252,6 +253,7 @@ export default function QuizClientComponent({
           size={"default"}
           disabled={currentQuestionIndex === 0}
           onClick={() => handleNavigation("prev")}
+          aria-label="Voltar à pergunta anterior"
         >
           <ChevronLeftIcon />
         </Button>
@@ -265,6 +267,7 @@ export default function QuizClientComponent({
             onClick={() => {
               handleNavigation("next");
             }}
+            aria-label="Ir para próxima pergunta"
           >
             <ChevronRightIcon />
           </Button>
@@ -274,6 +277,7 @@ export default function QuizClientComponent({
               <Button
                 size={"default"}
                 disabled={currentQuestionIndex !== questions.length - 1}
+                aria-label="Finalizar quiz"
               >
                 Finalizar
               </Button>

@@ -11,6 +11,7 @@ export function Item({ plant }: ItemProps) {
       className="hover:scale-105 transition-all bg-white hover:bg-primary/30 shadow-lg rounded-lg flex flex-col p-2 gap-2 items-center"
       prefetch={false}
       scroll={true}
+      aria-label={`Abrir detalhes de ${plant.name}`}
     >
       {plant.image_url && (
         <ImageCard alt={plant.name} src={plant.image_url} aspectRatio={1} />

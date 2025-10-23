@@ -10,7 +10,12 @@ export function Footer() {
       <div className="container border-t border-gray-300 max-w-5xl px-4 mx-auto text-center">
         <p className="text-sm text-gray-600 mt-2">
           Desenvolvido por{" "}
-          <Link href={url} target="_blank" className="font-bold">
+          <Link
+            href={url}
+            target="_blank"
+            className="font-bold"
+            aria-label="Abrir site do desenvolvedor"
+          >
             {developerName}
           </Link>
         </p>
