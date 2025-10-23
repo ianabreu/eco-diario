@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 :root {
   --background: #f8f5f0;
@@ -56,7 +56,7 @@
   --spacing: 0.25rem;
 }
 
-.dark {
+/* .dark {
   --background: #1c2a1f;
   --foreground: #f0ebe5;
   --card: #2d3a2e;
@@ -105,7 +105,7 @@
   --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
     0 8px 10px -1px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
-}
+} */
 
 @theme inline {
   --color-background: var(--background);

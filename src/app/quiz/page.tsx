@@ -47,6 +47,7 @@ export default function QuizPage() {
             value={[numQuestions]}
             onValueChange={(value) => setNumQuestions(value[0])}
             className="mb-8"
+            aria-label={`Arrastar ára definir quantidade de questões, mínimo: ${MIN_QUESTIONS} máximo: ${MAX_QUESTIONS}`}
           />
         </div>
 
